@@ -26,7 +26,7 @@ function Logo() {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <HashLink smooth to={'#top'} className='logo'>
+      <HashLink smooth to={'#'} className='logo'>
         <sup>Duke</sup>
         <sub className='logo-sub'>Padmore</sub>
       </HashLink>

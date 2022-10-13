@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 
 function NavBar() {
   return (
-    <nav>
+    <nav className='navbar'>
       <ul className='nav'>
         {navLinks &&
           navLinks.map((navLink) => (

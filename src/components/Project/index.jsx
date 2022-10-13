@@ -1,6 +1,6 @@
 function Project({ name, description, technologies }) {
   return (
-    <div>
+    <div className='projects-item'>
       <h3>{name}</h3>
       <p>{description}</p>
       {technologies.map((technology) => (

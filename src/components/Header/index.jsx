@@ -1,7 +1,10 @@
+import { useState, useEffect } from 'react';
 import Logo from '../Logo';
 import NavBar from '../NavBar';
 
 function Header() {
+  const [navbarScrolled, setNavbarScrolled] = useState(false);
+
   const handleButtonClick = () => {
     console.log('file downloaded');
     fetch('Duke Padmore - resume.pdf').then((response) => {
@@ -15,8 +18,24 @@ function Header() {
     });
   };
 
+  const changeNavbar = () => {
+    if (window.scrollY >= 80) {
+      setNavbarScrolled(true);
+    } else {
+      setNavbarScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', changeNavbar);
+    };
+  }, [window.scrollY]);
+
   return (
-    <header className='header'>
+    <header className={navbarScrolled ? 'header active' : 'header'}>
       <Logo />
       <div className='navigation'>
         <NavBar />
