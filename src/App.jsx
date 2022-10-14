@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Intro from './components/Intro';
+import IconCloud from './components/IconCloud';
 import About from './components/sections/About';
 import Contact from './components/sections/Contact';
 import Experience from './components/sections/Experience';
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <main className='main'>
         <Intro />
+        {/* <IconCloud /> */}
         <About />
         <Experience />
         <Projects />

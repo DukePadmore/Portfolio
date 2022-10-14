@@ -2,7 +2,7 @@ import { HashLink } from 'react-router-hash-link';
 
 function About() {
   return (
-    <section id='about'>
+    <section className='section' id='about'>
       <h2>About Me</h2>
       <p>
         Hi ! My name is Duke and I am a French web developer living in Canada.
@@ -15,10 +15,10 @@ function About() {
         designed websites.
       </p>
 
-      <HashLink smooth to='/#contact'>
+      {/* <HashLink smooth to='/#contact'>
         I'd be happy to tell you more about me.
-      </HashLink>
-      <ul>
+      </HashLink> */}
+      {/* <ul>
         Here are a few technologies I've been working with lately:
         <li>HTML5</li>
         <li>CSS3</li>
@@ -31,7 +31,7 @@ function About() {
         <li>Sequelize</li>
         <li>Sass</li>
         <li>Tailwind CSS</li>
-      </ul>
+      </ul> */}
     </section>
   );
 }

@@ -15,6 +15,7 @@ body {
 }
 
 .header {
+  width: 100%;
   padding: 0 50px;
   height: 80px;
   display: flex;
@@ -34,6 +35,10 @@ body {
   ); */
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+header.hidden {
+  display: none;
 }
 
 .navigation {
@@ -171,10 +176,12 @@ body {
   height: 100px;
   display: flex;
   justify-content: center;
-  background-color: rgb(65, 65, 65);
-  color: rgb(254, 254, 254);
   margin-top: 50px;
 }
+
+/* .footer-linkedin,
+.footer-github {
+} */
 
 .loading {
   display: grid;
@@ -200,7 +207,11 @@ body {
   transition: transform 0.5s;
 }
 
-section > h2 {
+.section {
+  min-height: 100vh;
+}
+
+.section > h2 {
   font-size: 2rem;
 }
 

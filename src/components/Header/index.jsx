@@ -4,6 +4,7 @@ import NavBar from '../NavBar';
 
 function Header() {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
+  // const [navbarHidden, setNavbarHidden] = useState(false);
 
   const handleButtonClick = () => {
     console.log('file downloaded');
@@ -24,6 +25,23 @@ function Header() {
     } else {
       setNavbarScrolled(false);
     }
+    // let previousScroll = 0;
+    // if (window.scrollY >= 80 && window.scrollY > previousScroll) {
+    //   setNavbarScrolled(true);
+    //   setNavbarHidden(true);
+    //   previousScroll = window.scrollY;
+    // } else if (window.scrollY >= 80 && window.scrollY < previousScroll) {
+    //   setNavbarScrolled(true);
+    //   setNavbarHidden(false);
+    //   previousScroll = window.scrollY;
+    // } else if (window.scrollY < 80) {
+    //   setNavbarScrolled(false);
+    //   setNavbarHidden(false);
+    //   previousScroll = window.scrollY;
+    // }
+    // ajout
+
+    // console.log(previousScroll);
   };
 
   useEffect(() => {

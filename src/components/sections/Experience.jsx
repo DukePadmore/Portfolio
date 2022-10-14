@@ -2,7 +2,7 @@ import { experience } from '../../data';
 
 function Experience() {
   return (
-    <section id='experience'>
+    <section className='section' id='experience'>
       <h2>Relevant Work Experience</h2>
       <ul>
         {experience &&

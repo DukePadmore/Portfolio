@@ -3,7 +3,7 @@ import Project from '../Project';
 
 function Projects() {
   return (
-    <section id='projects'>
+    <section className='section' id='projects'>
       <h2>Projects</h2>
       <div>
         {myProjects &&
