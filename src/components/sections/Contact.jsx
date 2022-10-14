@@ -1,9 +1,11 @@
 function Contact() {
   return (
     <section id='contact'>
-      <h2>Contact</h2>
+      <h2>Let's talk</h2>
       <p>I am currently looking for new opportunities and would love to...</p>
-      <button>Contact me</button>
+      <a href='mailto:dukepadmore@gmail.com' className='contact-button'>
+        Contact me
+      </a>
     </section>
   );
 }

@@ -4,20 +4,6 @@ function Loading() {
   const titleRef = useRef();
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // gsap.fromTo(
-      //   '.loading-title_char',
-      //   {
-      //     y: 100,
-      //     opacity: 0,
-      //   },
-      //   {
-      //     y: 0,
-      //     opacity: 1,
-      //     stagger: 0.05,
-      //     delay: 0.2,
-      //     duration: 0.4,
-      //   }
-      // );
       gsap.to('.loading-title_char', {
         y: 0,
         stagger: 0.05,

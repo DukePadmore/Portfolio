@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
+import Mail from '../../assets/mail.svg';
+import LinkedIn from '../../assets/linkedin.svg';
 
 function Logo() {
   const [isHovering, setIsHovering] = useState(false);
@@ -27,17 +29,23 @@ function Logo() {
       onMouseOut={handleMouseOut}
     >
       <HashLink smooth to={'#'} className='logo'>
-        <sup>Duke</sup>
+        <sup className='logo-sup'>Duke</sup>
         <sub className='logo-sub'>Padmore</sub>
       </HashLink>
       {isHovering && (
-        <div>
-          <p className='email' onClick={sendEmail}>
-            dukepadmore@gmail.com
-          </p>
-          <p className='linkedIn' onClick={linkedInProfile}>
-            my LinkedIn
-          </p>
+        <div className='logo-contacts'>
+          <a
+            href='https://www.linkedin.com/in/dukepadmore'
+            target='_blank'
+            rel='noreferrer'
+            className='logo-linkedIn'
+          >
+            <img src={LinkedIn} alt='linkedin' />
+          </a>
+
+          <a href='mailto:dukepadmore@gmail.com' className='logo-email'>
+            <img src={Mail} alt='mail' />
+          </a>
         </div>
       )}
     </div>

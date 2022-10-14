@@ -23,18 +23,24 @@ export const myProjects = [
     description: "O'Book is a platform that allows",
     technologies: ['React', 'Redux', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
     url: '/#about',
+    image:
+      'https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   },
   {
     name: 'JobHunter',
     description: 'JobHunter is a service...',
     technologies: ['React', 'Tailwind CSS', 'Firebase'],
     url: '/#about',
+    image:
+      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80',
   },
   {
     name: 'Portfolio',
     description: 'My portfolio',
     technologies: ['React', ''],
     url: '/#about',
+    image:
+      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1055&q=80',
   },
 ];
 
