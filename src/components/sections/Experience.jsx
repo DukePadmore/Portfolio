@@ -32,20 +32,6 @@ function Experience() {
           ))}
         </ol>
       </div>
-      {/* {experience &&
-        experience.map((position) => (
-          <div key={position.id}>
-            <h3>
-              {position.position} @<span> {position.company}</span>
-            </h3>
-            <h4>{position.year}</h4>
-            <ol>
-              {position.description.map((detail) => (
-                <li key={detail}>{detail}</li>
-              ))}
-            </ol>
-          </div>
-        ))} */}
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import { Cloud, renderSimpleIcon } from 'react-icon-cloud';
 import {
   siCss3,
+  siEslint,
   siExpress,
   siFirebase,
   siGit,
@@ -35,6 +36,7 @@ const options = {
 
 const icons = [
   siCss3,
+  siEslint,
   siExpress,
   siFirebase,
   siGit,
