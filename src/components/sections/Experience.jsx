@@ -16,7 +16,12 @@ function Experience() {
       <ul>
         {experience &&
           experience.map((position) => (
-            <li key={position.id} value={position.id} onClick={displayJob}>
+            <li
+              key={position.id}
+              className={position.id === selectedJob.id ? 'selected' : ''}
+              value={position.id}
+              onClick={displayJob}
+            >
               {position.position} @ {position.company}
             </li>
           ))}

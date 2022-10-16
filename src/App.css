@@ -1,4 +1,6 @@
-* {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,7 +40,7 @@ body {
 }
 
 header.hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .navigation {
@@ -137,7 +139,7 @@ header.hidden {
   background: transparent;
   border: 2px solid rgb(65, 65, 65);
   border-radius: 100px;
-  transition: all 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
 }
 
 .downloadButton:hover {
@@ -156,6 +158,10 @@ header.hidden {
   padding: 0 150px;
 }
 
+#about p {
+  font-size: 1.3rem;
+}
+
 .projects {
   display: flex;
   justify-content: space-between;
@@ -168,8 +174,21 @@ header.hidden {
   max-height: 400px;
   display: inline-block;
   padding: 20px;
-  border: solid 1px #e9dcd6;
-  background-color: #e5e5e5;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects-item:hover {
+  transform: translateY(-1px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.projects-item > img {
+  object-fit: cover;
+  width: 200px;
 }
 
 .footer {
@@ -178,10 +197,6 @@ header.hidden {
   justify-content: center;
   margin-top: 50px;
 }
-
-/* .footer-linkedin,
-.footer-github {
-} */
 
 .loading {
   display: grid;
@@ -208,7 +223,7 @@ header.hidden {
 }
 
 .section {
-  min-height: 100vh;
+  padding: 100px 0;
 }
 
 .section > h2 {

@@ -20,8 +20,9 @@ export const navLinks = [
 export const myProjects = [
   {
     name: "O'Book",
-    description: "O'Book is a platform that allows",
-    technologies: ['React', 'Redux', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
+    description:
+      "O'Book is a platform that allows users to lend books to each other",
+    technologies: ['React', 'Redux', 'Tailwind', 'Node.js', 'PostgreSQL'],
     url: '/#about',
     image:
       'https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
@@ -29,7 +30,7 @@ export const myProjects = [
   {
     name: 'JobHunter',
     description: 'JobHunter is a service...',
-    technologies: ['React', 'Tailwind CSS', 'Firebase'],
+    technologies: ['React', 'Tailwind', 'Firebase'],
     url: '/#about',
     image:
       'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80',
@@ -37,7 +38,7 @@ export const myProjects = [
   {
     name: 'Portfolio',
     description: 'My portfolio',
-    technologies: ['React', ''],
+    technologies: ['React', 'GSAP'],
     url: '/#about',
     image:
       'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1055&q=80',
@@ -86,7 +87,11 @@ export const experience = [
     company: 'Nike Inc.',
     position: 'Team Leader',
     year: '2016-2017',
-    description: ['xyz'],
+    description: [
+      'Management of a team of 10 sales associates',
+      'Planning & processing of daily deliveries',
+      'Stock management',
+    ],
   },
 ];
 export const email = 'dukepadmore@gmail.com';

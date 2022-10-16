@@ -4,7 +4,7 @@ import NavBar from '../NavBar';
 
 function Header() {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
-  // const [navbarHidden, setNavbarHidden] = useState(false);
+  const [navbarHidden, setNavbarHidden] = useState(false);
 
   const handleButtonClick = () => {
     console.log('file downloaded');
@@ -19,29 +19,21 @@ function Header() {
     });
   };
 
+  let previousScroll = 0;
+  let newScroll = 0;
   const changeNavbar = () => {
-    if (window.scrollY >= 80) {
+    newScroll = window.scrollY;
+    if (newScroll >= 80 && newScroll > previousScroll) {
       setNavbarScrolled(true);
-    } else {
+      setNavbarHidden(true);
+    } else if (newScroll >= 80 && newScroll < previousScroll) {
+      setNavbarScrolled(true);
+      setNavbarHidden(false);
+    } else if (newScroll < 80) {
       setNavbarScrolled(false);
+      setNavbarHidden(false);
     }
-    // let previousScroll = 0;
-    // if (window.scrollY >= 80 && window.scrollY > previousScroll) {
-    //   setNavbarScrolled(true);
-    //   setNavbarHidden(true);
-    //   previousScroll = window.scrollY;
-    // } else if (window.scrollY >= 80 && window.scrollY < previousScroll) {
-    //   setNavbarScrolled(true);
-    //   setNavbarHidden(false);
-    //   previousScroll = window.scrollY;
-    // } else if (window.scrollY < 80) {
-    //   setNavbarScrolled(false);
-    //   setNavbarHidden(false);
-    //   previousScroll = window.scrollY;
-    // }
-    // ajout
-
-    // console.log(previousScroll);
+    previousScroll = newScroll;
   };
 
   useEffect(() => {
@@ -50,10 +42,18 @@ function Header() {
     return () => {
       window.removeEventListener('scroll', changeNavbar);
     };
-  }, [window.scrollY]);
+  }, []);
 
   return (
-    <header className={navbarScrolled ? 'header active' : 'header'}>
+    <header
+      className={
+        !navbarHidden
+          ? navbarScrolled
+            ? 'header active'
+            : 'header'
+          : 'header hidden'
+      }
+    >
       <Logo />
       <div className='navigation'>
         <NavBar />
