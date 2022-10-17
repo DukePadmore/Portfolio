@@ -11,6 +11,11 @@ function Loading() {
         duration: 0.1,
       });
     }, titleRef);
+    gsap.to('.loading', {
+      opacity: 0,
+      delay: 1.5,
+      duration: 0.6,
+    });
     return () => ctx.revert();
   }, []);
   return (
