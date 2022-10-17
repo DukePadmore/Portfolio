@@ -26,7 +26,6 @@ function App() {
       <Header />
       <main className='main'>
         <Intro />
-        {/* <IconCloud /> */}
         <About />
         <Experience />
         <Projects />

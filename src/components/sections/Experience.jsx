@@ -6,7 +6,6 @@ function Experience() {
   const selectedJob = experience.find((position) => position.id === job);
   const displayJob = (e) => {
     if (selectedJob.id != e.target.value) {
-      console.log(e.target.value);
       setJob(e.target.value);
     }
   };

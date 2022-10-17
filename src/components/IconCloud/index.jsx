@@ -22,11 +22,12 @@ import {
 } from 'simple-icons/icons';
 
 const options = {
+  activeCursor: 'pointer',
   clickToFront: 500,
   depth: 1,
   imageScale: 2,
   initial: [0.1, -0.1],
-  outlineColour: '#0000',
+  outlineColour: 'transparent',
   reverse: true,
   tooltip: 'native',
   tooltipDelay: 0,
