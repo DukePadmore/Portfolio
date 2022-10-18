@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: inherit;
   list-style: none;
+  font-family: inherit;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   color: rgb(65, 65, 65);
   background-color: #fdfdfd;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .header {
@@ -25,7 +27,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  transition: all 0.3s ease-in;
+  transition: all 300ms ease-in;
   animation: navbarAppear 300ms ease-in;
 }
 
@@ -39,7 +41,7 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-header.hidden {
+.header.hidden {
   visibility: hidden;
   animation: navbarDisappear 300ms ease-in;
 }
@@ -74,9 +76,6 @@ header.hidden {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 80px);
-
-  /* animation: appear 750ms;
-  animation-fill-mode: backwards; */
 }
 
 .intro p {
@@ -105,10 +104,10 @@ header.hidden {
   text-decoration: none;
   color: rgb(65, 65, 65);
   cursor: pointer;
+  transition: animation 0.3s;
 }
 
 .logo-contacts {
-  /* border: 1px solid black; */
   position: absolute;
   padding-left: 10px;
   display: flex;
@@ -116,23 +115,18 @@ header.hidden {
   left: 160px;
 }
 .logo-email {
-  animation: email 500ms ease-out;
-  text-decoration: none;
+  animation: contacts 500ms ease-out;
   cursor: pointer;
 }
 
-.logo-email:link,
-.logo-email:visited {
-  color: rgb(65, 65, 65);
-}
-
 .logo-linkedIn {
-  animation: email 500ms ease-out;
+  animation: contacts 500ms ease-out;
   cursor: pointer;
   margin: 0 15px;
 }
 
 .downloadButton {
+  font-weight: 500;
   align-self: center;
   border-style: none;
   height: 70%;
@@ -162,8 +156,16 @@ header.hidden {
   align-items: center;
 }
 
+#about {
+  margin: 0 250px;
+}
+
 #about p {
   font-size: 1.3rem;
+}
+
+.experience-container {
+  display: flex;
 }
 
 .projects {
@@ -181,7 +183,7 @@ header.hidden {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   background-color: #fff;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
 
@@ -205,8 +207,8 @@ header.hidden {
 }
 
 .project-techs .tech {
-  padding: 2.5px 5px;
-  border: 1px solid rgb(65, 65, 65);
+  padding: 5px 10px;
+  border: 2px solid rgb(65, 65, 65);
   border-radius: 100px;
   margin-right: 5px;
 }
@@ -215,6 +217,15 @@ header.hidden {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+
+.footer-text {
+  margin-right: 3px;
+}
+
+.footer-medias {
+  padding: 3px;
+  border-radius: 50%;
 }
 
 .loading {
@@ -286,30 +297,19 @@ header.hidden {
 @keyframes navbarDisappear {
   0% {
     opacity: 1;
+    transform: translate(0);
   }
 
   100% {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-80px);
   }
 }
 
-@keyframes email {
+@keyframes contacts {
   0% {
     opacity: 0;
     transform: translateX(25px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes linkedIn {
-  0% {
-    opacity: 0;
-    transform: translateY(25px);
   }
 
   100% {

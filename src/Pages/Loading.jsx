@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+
 function Loading() {
   const titleRef = useRef();
   useEffect(() => {

@@ -4,21 +4,21 @@ import GitHub from '../../assets/github.svg';
 function Footer() {
   return (
     <footer className='footer'>
-      <p>© Duke Padmore 2022</p>
+      <p className='footer-text'>© Duke Padmore 2022</p>
       <div>
         <a
           href='https://www.linkedin.com/in/dukepadmore'
           target='_blank'
           rel='noreferrer'
         >
-          <img className='footer-linkedin' src={LinkedIn} alt='linkedin' />
+          <img className='footer-medias' src={LinkedIn} alt='linkedin' />
         </a>
         <a
-          href='https://www.linkedin.com/in/dukepadmore'
+          href='https://github.com/DukePadmore'
           target='_blank'
           rel='noreferrer'
         >
-          <img className='footer-github' src={GitHub} alt='github' />
+          <img className='footer-medias' src={GitHub} alt='github' />
         </a>
       </div>
     </footer>
