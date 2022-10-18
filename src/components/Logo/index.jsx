@@ -14,14 +14,6 @@ function Logo() {
     setIsHovering(false);
   };
 
-  const sendEmail = () => {
-    console.log('email sent');
-  };
-
-  const linkedInProfile = () => {
-    console.log('linkedIn Profile');
-  };
-
   return (
     <div
       className='logoBox'

@@ -18,7 +18,11 @@ function Experience() {
             experience.map((position) => (
               <li
                 key={position.id}
-                className={position.id === selectedJob.id ? 'selected' : ''}
+                className={
+                  position.id === selectedJob.id
+                    ? 'experience-item selected'
+                    : 'experience-item'
+                }
                 value={position.id}
                 onClick={displayJob}
               >
@@ -26,14 +30,16 @@ function Experience() {
               </li>
             ))}
         </ul>
-        <div key={selectedJob.id}>
+        <div className='experience-detail' key={selectedJob.id}>
           <h3>
             {selectedJob.position} @<span> {selectedJob.company}</span>
           </h3>
           <h4>{selectedJob.year}</h4>
-          <ol>
+          <ol className='missions-list'>
             {selectedJob.description.map((detail) => (
-              <li key={detail}>{detail}</li>
+              <li className='missions-item' key={detail}>
+                {detail}
+              </li>
             ))}
           </ol>
         </div>

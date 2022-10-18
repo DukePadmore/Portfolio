@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 function Loading() {
-  const titleRef = useRef();
+  const titleRef = useRef(null);
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to('.loading-title_char', {
