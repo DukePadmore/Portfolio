@@ -21,33 +21,45 @@ export const myProjects = [
   {
     name: "O'Book",
     description:
-      "O'Book is a platform that allows users to lend books to each other",
-    technologies: ['React', 'Redux', 'Tailwind', 'Node.js', 'PostgreSQL'],
+      "O'Book is a platform that allows users to lend and borrow books to each other",
+    stack: ['React', 'Redux', 'Tailwind', 'Node.js', 'PostgreSQL'],
     url: '/#about',
     image:
       'https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   },
   {
-    name: 'JobHunter',
-    description: 'JobHunter is a service...',
-    technologies: ['React', 'Tailwind', 'Firebase'],
+    name: 'JobHunter (work in progress)',
+    description:
+      'JobHunter allows you to organize your job search and track the status of your applications.',
+    stack: ['React', 'Tailwind', 'Firebase'],
     url: '/#about',
     image:
-      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80',
+      'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
   },
   {
     name: 'Portfolio',
-    description: 'My portfolio',
-    technologies: ['React', 'GSAP'],
+    description: 'My personal portfolio',
+    stack: ['React', 'GSAP'],
     url: '/#about',
-    image:
-      'https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+    image: '/portfolio.png',
   },
 ];
 
 export const experience = [
   {
     id: 1,
+    company: "O'Clock",
+    position: 'Fron-end Lead Dev (training project)',
+    year: 'August - September 2022',
+    description: [
+      'Scope → GEFCO France & its subsidiaries (more than 70 locations)',
+      'Purchasing categories: Consulting Services & General Expenses',
+      'Purchasing strategy development, supplier sourcing, tendering, negotiation & contract management',
+      'Reporting & performance management: KPI analysis & spend analysis by purchasing category',
+    ],
+  },
+  {
+    id: 2,
     company: 'GEFCO',
     position: 'Country Buyer',
     year: '2019-2022',
@@ -59,7 +71,7 @@ export const experience = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: 'GEFCO',
     position: 'Global Indirect Buyer',
     year: '2018-2019',
@@ -71,7 +83,7 @@ export const experience = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: 'Nike Inc.',
     position: 'Assistant Store Manager',
     year: '2017-2018',
@@ -83,7 +95,7 @@ export const experience = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     company: 'Nike Inc.',
     position: 'Team Leader',
     year: '2016-2017',

@@ -20,7 +20,7 @@ function App() {
       elem,
       {
         opacity: 0,
-        y: -80,
+        y: 80,
       },
       {
         opacity: 1,
@@ -35,7 +35,7 @@ function App() {
       elem,
       {
         opacity: 0,
-        y: -20,
+        y: 20,
       },
       {
         opacity: 1,
@@ -56,10 +56,10 @@ function App() {
   useLayoutEffect(() => {
     if (!isLoading) {
       transitionOnLoad('.intro', 0.3, 0.7);
-      transitionOnScroll('#about', 1, 1.2);
-      transitionOnScroll('#experience', 0.8, 1);
-      transitionOnScroll('#projects', 0.8, 1);
-      transitionOnScroll('#contact', 0.8, 1);
+      transitionOnScroll('#about', 0.5, 1);
+      transitionOnScroll('#experience', 0.5, 1);
+      transitionOnScroll('#projects', 0.5, 1);
+      transitionOnScroll('#contact', 0.5, 1);
     }
   }, [isLoading]);
 
