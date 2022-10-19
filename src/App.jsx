@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './App.css';
+import './App.scss';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import About from './components/sections/About';

@@ -8,15 +8,18 @@
   font-family: inherit;
 }
 
-/* $color-primary: #fdfdfd;
+$color-primary: #fdfdfd;
 $color-secondary: #414141;
-$color-tertiary: */
+$color-tertiary: '';
+$button-width: '';
+$button-padding: '';
 
 body {
+  /* font-size: 62.5%; */
   font-family: 'Syne', sans-serif;
   line-height: 1.7;
-  color: rgb(65, 65, 65);
-  background-color: #fdfdfd;
+  color: $color-secondary;
+  background-color: $color-primary;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -75,27 +78,34 @@ body {
   margin-right: 10px;
 }
 
+// .intro h1 {
+//   font-size: 4.5rem;
+//   /* display: inline-block;
+//   background-image: radial-gradient(
+//     circle farthest-corner at 10% 20%,
+//     rgba(255, 209, 67, 1) 0%,
+//     rgba(255, 145, 83, 1) 90%
+//   );
+//   -webkit-background-clip: text;
+//   color: transparent; */
+// }
+
 .intro {
   display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 80px);
-}
 
-.intro p {
-  font-size: 2rem;
-}
+  .intro__title {
+    font-size: 2rem;
+    font-weight: 400;
 
-.intro h1 {
-  font-size: 4.5rem;
-  /* display: inline-block;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(255, 209, 67, 1) 0%,
-    rgba(255, 145, 83, 1) 90%
-  );
-  -webkit-background-clip: text;
-  color: transparent; */
+    &--focus {
+      font-size: 4.5rem;
+      display: block;
+      font-weight: 700;
+    }
+  }
 }
 
 .logoBox {
