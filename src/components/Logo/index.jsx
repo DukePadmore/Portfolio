@@ -16,26 +16,26 @@ function Logo() {
 
   return (
     <div
-      className='logoBox'
+      className='logo'
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <HashLink smooth to={'#'} className='logo'>
-        <sup className='logo-sup'>Duke</sup>
-        <sub className='logo-sub'>Padmore</sub>
+      <HashLink smooth to={'#'} className='logo__text'>
+        <sup className='logo__text--duke'>Duke</sup>
+        <sub className='logo__text--pad'>Padmore</sub>
       </HashLink>
       {isHovering && (
-        <div className='logo-contacts'>
+        <div className='logo__contact'>
           <a
             href='https://www.linkedin.com/in/dukepadmore'
             target='_blank'
             rel='noreferrer'
-            className='logo-linkedIn'
+            className='logo__linkedin'
           >
             <img src={LinkedIn} alt='linkedin' />
           </a>
 
-          <a href='mailto:dukepadmore@gmail.com' className='logo-email'>
+          <a href='mailto:dukepadmore@gmail.com' className='logo__email'>
             <img src={Mail} alt='mail' />
           </a>
         </div>

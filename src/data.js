@@ -43,7 +43,7 @@ export const myProjects = [
     description: 'My personal portfolio',
     stack: ['React', 'GSAP'],
     url: '/#about',
-    repo: 'test3',
+    repo: 'https://github.com/DukePadmore/Portfolio',
     image: '/portfolio.png',
   },
 ];

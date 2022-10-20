@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Logo from '../Logo';
 import NavBar from '../NavBar';
+import HamburgerMenu from '../HamburgerMenu';
 
 function Header() {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -23,13 +24,14 @@ function Header() {
   let newScroll = 0;
   const changeNavbar = () => {
     newScroll = window.scrollY;
-    if (newScroll >= 80 && newScroll > previousScroll) {
+    console.log(newScroll);
+    if (newScroll >= 70 && newScroll > previousScroll) {
       setNavbarScrolled(true);
       setNavbarHidden(true);
-    } else if (newScroll >= 80 && newScroll < previousScroll) {
+    } else if (newScroll >= 70 && newScroll < previousScroll) {
       setNavbarScrolled(true);
       setNavbarHidden(false);
-    } else if (newScroll < 80) {
+    } else if (newScroll < 70) {
       setNavbarScrolled(false);
       setNavbarHidden(false);
     }
@@ -49,9 +51,9 @@ function Header() {
       className={
         !navbarHidden
           ? navbarScrolled
-            ? 'header active'
+            ? 'header header--active'
             : 'header'
-          : 'header hidden'
+          : 'header header--hidden'
       }
     >
       <Logo />
@@ -61,6 +63,7 @@ function Header() {
           Resume
         </button>
       </div>
+      <HamburgerMenu />
     </header>
   );
 }

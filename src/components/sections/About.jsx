@@ -2,9 +2,9 @@ import { HashLink } from 'react-router-hash-link';
 
 function About() {
   return (
-    <section className='section' id='about'>
-      <h2>About Me</h2>
-      <p>
+    <section className='section about' id='about'>
+      <h2 className='about__title'>About Me</h2>
+      <p className='about__desc'>
         Hi ! My name is Duke and I am a French web developer living in Canada.
         After almost 10 years of experience in Retail and Procurement, I decided
         to transition to a new career in a field that has fascinated me for as
