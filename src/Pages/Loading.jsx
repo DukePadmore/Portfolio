@@ -5,7 +5,7 @@ function Loading() {
   const titleRef = useRef(null);
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.to('.loading-title_char', {
+      gsap.to('.loading__title-char', {
         y: 0,
         stagger: 0.05,
         delay: 0.2,
@@ -21,18 +21,18 @@ function Loading() {
   }, []);
   return (
     <div className='loading'>
-      <h1 className='loading-title' ref={titleRef}>
-        <div className='loading-title_char'>D</div>
-        <div className='loading-title_char'>u</div>
-        <div className='loading-title_char'>k</div>
-        <div className='loading-title_char'>e</div>
-        <div className='loading-title_char'>P</div>
-        <div className='loading-title_char'>a</div>
-        <div className='loading-title_char'>d</div>
-        <div className='loading-title_char'>m</div>
-        <div className='loading-title_char'>o</div>
-        <div className='loading-title_char'>r</div>
-        <div className='loading-title_char'>e</div>
+      <h1 className='loading__title' ref={titleRef}>
+        <div className='loading__title-char'>D</div>
+        <div className='loading__title-char'>u</div>
+        <div className='loading__title-char'>k</div>
+        <div className='loading__title-char'>e</div>
+        <div className='loading__title-char'>P</div>
+        <div className='loading__title-char'>a</div>
+        <div className='loading__title-char'>d</div>
+        <div className='loading__title-char'>m</div>
+        <div className='loading__title-char'>o</div>
+        <div className='loading__title-char'>r</div>
+        <div className='loading__title-char'>e</div>
       </h1>
     </div>
   );

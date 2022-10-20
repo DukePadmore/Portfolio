@@ -11,9 +11,9 @@ function Experience() {
   };
   return (
     <section className='section experience' id='experience'>
-      <h2>Relevant Work Experience</h2>
-      <div className='experience-container'>
-        <ul className='experience-list'>
+      <h2 className='experience__title'>Relevant Work Experience</h2>
+      <div className='experience__box'>
+        <ul className='experience__list'>
           {experience &&
             experience.map((position) => (
               <li

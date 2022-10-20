@@ -15,13 +15,33 @@ $button-width: '';
 $button-padding: '';
 
 body {
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
   font-family: 'Syne', sans-serif;
   line-height: 1.7;
   color: $color-secondary;
   background-color: $color-primary;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+.loading {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: rgb(20, 20, 20);
+  color: rgb(220, 220, 220);
+
+  &__title {
+    font-size: 6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.5rem;
+  }
+
+  &__title-char {
+    display: inline-block;
+    transform: translateY(118px);
+    transition: transform 0.5s;
+  }
 }
 
 .header {
@@ -180,13 +200,14 @@ body {
 
 .experience {
   width: 100%;
-}
 
-.experience-list {
-  margin-right: 30px;
-}
-.experience-container {
-  display: flex;
+  &__box {
+    display: flex;
+  }
+
+  &__list {
+    margin-right: 30px;
+  }
 }
 
 .experience-item {
@@ -206,12 +227,12 @@ body {
   content: '▹ ';
 }
 
-.projects {
+.projects__box {
   display: flex;
   justify-content: space-between;
 }
 
-.project-item {
+.project {
   min-width: 200px;
   max-width: 500px;
   min-height: 200px;
@@ -225,81 +246,57 @@ body {
   overflow: hidden;
 }
 
-.project-item:hover {
+.project:hover {
   transform: translateY(-1px);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.project-item .project-image {
+.project .project__image {
   object-fit: cover;
   height: 200px;
   width: 100%;
   clip-path: ellipse(95% 63% at 50% 35%);
+  transition: filter 300ms;
 }
 
-.project-name,
-.project-desc,
-.project-techs {
+.project:hover .project__image {
+  filter: blur(4px);
+}
+
+.project__figure {
+  position: relative;
+}
+.project__image-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project__image-caption--hidden {
+  visibility: hidden;
+}
+
+.project__name,
+.project__desc,
+.project__stack {
   padding: 0 20px 5px;
 }
 
-.project-techs .tech {
+.project__stack .project__tech {
   padding: 5px 10px;
   border: 2px solid rgb(65, 65, 65);
   border-radius: 100px;
   margin-right: 5px;
 }
-.footer {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
 
-.footer-text {
-  margin-right: 15px;
-}
-
-.footer-medias {
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.loading {
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  background-color: rgb(20, 20, 20);
-  color: rgb(220, 220, 220);
-}
-
-.loading-title {
-  font-size: 6rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  line-height: 5.5rem;
-}
-
-.loading-title_char {
-  display: inline-block;
-  transform: translateY(118px);
-  transition: transform 0.5s;
-}
-
-.section {
-  padding: 80px 0;
-}
-
-.section > h2 {
-  font-size: 2rem;
-}
-
-#contact {
+.contact {
   text-align: center;
   margin: 0 280px;
 }
 
-.contact-button {
+.contact__button {
   display: inline-block;
   padding: 5px 10px;
   border: 2px solid rgb(65, 65, 65);
@@ -307,18 +304,42 @@ body {
   transition: all 0.3s;
   text-decoration: none;
   color: rgb(65, 65, 65);
+
+  &:hover {
+    background-color: rgb(65, 65, 65);
+    color: rgb(254, 254, 254);
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: rgb(65, 65, 65);
+    transform: scale(1) translateY(0);
+  }
 }
 
-.contact-button:hover {
-  background-color: rgb(65, 65, 65);
-  color: rgb(254, 254, 254);
-  transform: scale(1.05) translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  &__text {
+    margin-right: 15px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    border-radius: 50%;
+  }
 }
 
-.contact-button:active {
-  background-color: rgb(65, 65, 65);
-  transform: scale(1) translateY(0);
+.section {
+  padding: 80px 0;
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 @keyframes navbarAppear {

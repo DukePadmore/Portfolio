@@ -24,6 +24,7 @@ export const myProjects = [
       "O'Book is a platform that allows users to lend and borrow books to each other",
     stack: ['React', 'Redux', 'Tailwind', 'Node.js', 'PostgreSQL'],
     url: '/#about',
+    repo: 'test1',
     image:
       'https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   },
@@ -33,6 +34,7 @@ export const myProjects = [
       'JobHunter allows you to organize your job search and track the status of your applications.',
     stack: ['React', 'Tailwind', 'Firebase'],
     url: '/#about',
+    repo: 'test2',
     image:
       'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
   },
@@ -41,6 +43,7 @@ export const myProjects = [
     description: 'My personal portfolio',
     stack: ['React', 'GSAP'],
     url: '/#about',
+    repo: 'test3',
     image: '/portfolio.png',
   },
 ];
