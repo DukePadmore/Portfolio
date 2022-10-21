@@ -23,15 +23,19 @@ function Project({ name, description, stack, image, url, repo }) {
               : 'project__image-caption project__image-caption--hidden'
           }
         >
-          <a href={url} target='_blank' rel='noreferrer'>
-            Website
-          </a>
+          {url ? (
+            <a href={url} target='_blank' rel='noreferrer'>
+              Website
+            </a>
+          ) : (
+            ''
+          )}
           <a href={repo} target='_blank' rel='noreferrer'>
             <svg
               fill='#414141'
               role='img'
-              width='24'
-              height='24'
+              width='16'
+              height='16'
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'
             >

@@ -1,6 +1,6 @@
 $color-primary: #fdfdfd;
 $color-secondary: #414141;
-$color-tertiary: '';
+$color-tertiary: #6c01b8;
 $button-width: '';
 $button-padding: '';
 
@@ -35,12 +35,18 @@ body {
 
 @mixin buttonStyle {
   font-weight: 500;
-  // font-size: 1.3rem;
-  padding: 0.7em 1.3em;
+  padding: 0.5em 1.5em;
   background: $color-primary;
   border: 2px solid $color-secondary;
   color: $color-secondary;
   border-radius: 3em;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: rgb(254, 254, 254);
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .loading {
@@ -118,6 +124,7 @@ body {
 
 .navigation {
   display: flex;
+  align-items: center;
 }
 
 .nav {
@@ -159,12 +166,12 @@ body {
   font-size: 1.3rem;
 }
 
-.downloadButton:hover {
-  background-color: $color-secondary;
-  color: rgb(254, 254, 254);
-  transform: scale(1.05) translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+// .downloadButton:hover {
+//   background-color: $color-secondary;
+//   color: rgb(254, 254, 254);
+//   transform: scale(1.05) translateY(-1px);
+//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+// }
 
 .downloadButton:active {
   background-color: $color-secondary;
@@ -188,7 +195,7 @@ body {
 }
 
 .main {
-  padding: 0 10rem;
+  padding: 0 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,8 +208,10 @@ body {
   height: calc(100vh - 8rem);
 
   &__title {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     font-weight: 400;
+    margin-right: 4rem;
+    padding-left: 2rem;
 
     &--focus {
       font-size: 7.2rem;
@@ -213,73 +222,37 @@ body {
 }
 
 .section {
-  padding: 8rem 0;
+  padding: 10rem 0;
+  margin-top: 5rem;
 
   h2 {
+    text-align: center;
     font-size: 3.2rem;
+    margin-bottom: 4rem;
   }
 }
 
 .about {
-  width: 70vw;
+  padding: 0 10vw;
+  max-width: 1000px;
 
   &__desc {
     font-size: 2rem;
-  }
-}
-
-.experience {
-  width: 100%;
-
-  &__box {
-    display: flex;
-  }
-
-  &__list {
-    margin-right: 3rem;
-    font-size: 1.3rem;
-  }
-
-  &__list-item {
-    padding: 0.8rem 0.5rem;
-    border-left: 3px solid rgba(100, 100, 100, 0.8);
-
-    &--selected {
-      transition: all 0.3s ease-in;
-      border-left: 3px solid #f9d862;
-      background-color: rgba($color-secondary, 0.9);
-      color: #fdfdfd;
-      box-shadow: rgba(164, 110, 22, 0.2) 0px 18px 29px 0px;
-    }
-  }
-
-  &__title {
-    font-size: 2.2rem;
-  }
-
-  &__date {
-    font-size: 1.5rem;
-  }
-
-  &__missions-item {
-    font-size: 1.8rem;
-    &::before {
-      content: '▹ ';
-    }
+    text-align: justify;
   }
 }
 
 .projects__box {
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
 }
 
 .project {
-  min-width: 200px;
+  // min-width: 200px;
+  // min-height: 200px;
   max-width: 500px;
-  min-height: 200px;
   max-height: 400px;
-  display: inline-block;
   padding-bottom: 2rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 1rem;
@@ -314,6 +287,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    & a {
+      font-size: 1rem;
+      display: block;
+      padding: 0.1em 0.8em;
+      background: $color-primary;
+      border: 1px solid $color-secondary;
+      color: $color-secondary;
+      border-radius: 3em;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__image-caption--hidden {
@@ -327,10 +312,64 @@ body {
   }
 
   &__tech {
-    padding: 5px 10px;
-    border: 2px solid $color-secondary;
-    border-radius: 100px;
-    margin-right: 5px;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+  }
+}
+
+.experience {
+  width: 80%;
+
+  &__box {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &__list {
+    margin-right: 3rem;
+    font-size: 1.3rem;
+    width: max-content;
+  }
+
+  &__list-item {
+    padding: 0.8rem 0.5rem;
+    border-left: 3px solid rgba(100, 100, 100, 0.8);
+
+    &:hover {
+      transition: all 0.3s ease-in;
+      background-color: rgba($color-secondary, 0.9);
+      color: #fdfdfd;
+      box-shadow: rgba(164, 110, 22, 0.2) 0px 18px 29px 0px;
+    }
+    &--selected {
+      transition: all 0.3s ease-in;
+      border-left: 3px solid #f9d862;
+      // background-color: rgba(250, 250, 250, 0.9);
+      color: $color-secondary;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 1rem;
+      background-color: #fff;
+    }
+  }
+
+  &__detail {
+    width: 100%;
+  }
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__date {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__missions-item {
+    font-size: 1.8rem;
+    &::before {
+      content: '▹ ';
+    }
   }
 }
 
@@ -341,18 +380,18 @@ body {
 
   &__button {
     @include buttonStyle;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-decoration: none;
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 2em;
     transition: all 0.3s;
 
-    &:hover {
-      background-color: $color-secondary;
-      color: $color-primary;
-      transform: scale(1.05) translateY(-1px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+    // &:hover {
+    //   background-color: $color-secondary;
+    //   color: $color-primary;
+    //   transform: scale(1.05) translateY(-1px);
+    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    // }
 
     &:active {
       background-color: $color-secondary;
@@ -362,11 +401,10 @@ body {
 }
 
 .footer {
-  font-size: 1.5rem;
-  height: 100px;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 0 20px;
 
   &__text {
     margin-right: 15px;
@@ -415,11 +453,26 @@ body {
 
 //AJOUT DUKE
 @media only screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+    font-size: 10px;
+  }
+
+  body {
+    padding: 0 8px;
+  }
   .navigation {
     display: none;
   }
+
+  .main {
+    padding: 0;
+  }
   .intro {
     flex-direction: column;
+  }
+  .section {
+    padding: 10px 5px;
   }
 
   .hamburger {

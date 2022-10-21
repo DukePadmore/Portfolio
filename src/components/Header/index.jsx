@@ -24,7 +24,6 @@ function Header() {
   let newScroll = 0;
   const changeNavbar = () => {
     newScroll = window.scrollY;
-    console.log(newScroll);
     if (newScroll >= 70 && newScroll > previousScroll) {
       setNavbarScrolled(true);
       setNavbarHidden(true);

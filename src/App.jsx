@@ -35,7 +35,7 @@ function App() {
       elem,
       {
         opacity: 0,
-        y: 20,
+        y: 50,
       },
       {
         opacity: 1,
@@ -56,10 +56,10 @@ function App() {
   useLayoutEffect(() => {
     if (!isLoading) {
       transitionOnLoad('.intro', 0.3, 0.7);
-      transitionOnScroll('#about', 0.5, 1);
-      transitionOnScroll('#experience', 0.5, 1);
-      transitionOnScroll('#projects', 0.5, 1);
-      transitionOnScroll('#contact', 0.5, 1);
+      transitionOnScroll('#about', 0.5, 0.7);
+      transitionOnScroll('#projects', 0.5, 0.7);
+      transitionOnScroll('#experience', 0.5, 0.7);
+      transitionOnScroll('#contact', 0.5, 0.7);
     }
   }, [isLoading]);
 
@@ -72,8 +72,8 @@ function App() {
       <main className='main'>
         <Intro />
         <About />
-        <Experience />
         <Projects />
+        <Experience />
         <Contact />
       </main>
       <Footer />
