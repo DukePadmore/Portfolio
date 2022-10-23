@@ -13,7 +13,8 @@ function About() {
       <p className='about__desc'>
         Thanks to an intensive 6-months Fullstack JavaScript program at École
         O'Clock (Paris, France), I am now ready to take on new and exciting
-        challenges as a web developer in Canada.
+        challenges as a web developer. I still have a lot to learn, but I am
+        confident that my curiosity, passion and my skills will be ...
       </p>
       <p className='about__desc'>
         With a strong interest for anything related to front-end, my goal is to

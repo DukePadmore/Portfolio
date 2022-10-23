@@ -1,8 +1,19 @@
-$color-primary: #fdfdfd;
+$color-primary: rgb(253, 253, 253);
 $color-secondary: #414141;
-$color-tertiary: #6c01b8;
-$button-width: '';
-$button-padding: '';
+$color-tertiary: #1b9aaa;
+
+// #d9ed92,
+// #b5e48c,
+// #99d98c,
+// #76c893,
+// #52b69a,
+// #34a0a4,
+// #168aad,
+// #1a759f,
+// #1e6091,
+// #184e77
+
+// #4158d0, #c850c0, #ffcc70, #4158d0
 
 *,
 ::before,
@@ -36,14 +47,14 @@ body {
 @mixin buttonStyle {
   font-weight: 500;
   padding: 0.5em 1.5em;
-  background: $color-primary;
-  border: 2px solid $color-secondary;
-  color: $color-secondary;
+  background: $color-tertiary;
+  border: 2px solid $color-tertiary;
+  color: white;
   border-radius: 3em;
 
   &:hover {
-    background-color: $color-secondary;
-    color: rgb(254, 254, 254);
+    background-color: rgb(254, 254, 254);
+    color: $color-tertiary;
     transform: scale(1.05) translateY(-1px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
@@ -66,6 +77,28 @@ body {
     transform: translateY(118px);
     transition: transform 0.5s;
   }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    to right,
+    #d9ed92,
+    #99d98c,
+    #52b69a,
+    #168aad,
+    #1e6091,
+    #184e77,
+    #1a759f,
+    #34a0a4,
+    #76c893,
+    #b5e48c,
+    #d9ed92
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  background-size: 200%;
+  animation: background-pan 5s linear infinite;
 }
 
 .header {
@@ -148,30 +181,11 @@ body {
   }
 }
 
-// .intro h1 {
-//   font-size: 4.5rem;
-//   /* display: inline-block;
-//   background-image: radial-gradient(
-//     circle farthest-corner at 10% 20%,
-//     rgba(255, 209, 67, 1) 0%,
-//     rgba(255, 145, 83, 1) 90%
-//   );
-//   -webkit-background-clip: text;
-//   color: transparent; */
-// }
-
 .downloadButton {
   @include buttonStyle;
   transition: transform 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
   font-size: 1.3rem;
 }
-
-// .downloadButton:hover {
-//   background-color: $color-secondary;
-//   color: rgb(254, 254, 254);
-//   transform: scale(1.05) translateY(-1px);
-//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-// }
 
 .downloadButton:active {
   background-color: $color-secondary;
@@ -219,6 +233,18 @@ body {
       font-weight: 700;
     }
   }
+
+  &__button {
+    @include buttonStyle;
+    font-size: 1.8rem;
+    margin: 4rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s,
+      background-color 0.3s;
+  }
+
+  &__scroll-arrow {
+    animation: arrow-move 2s linear infinite;
+  }
 }
 
 .section {
@@ -249,8 +275,6 @@ body {
 }
 
 .project {
-  // min-width: 200px;
-  // min-height: 200px;
   max-width: 500px;
   max-height: 400px;
   padding-bottom: 2rem;
@@ -386,13 +410,6 @@ body {
     margin-top: 2em;
     transition: all 0.3s;
 
-    // &:hover {
-    //   background-color: $color-secondary;
-    //   color: $color-primary;
-    //   transform: scale(1.05) translateY(-1px);
-    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    // }
-
     &:active {
       background-color: $color-secondary;
       transform: scale(1) translateY(0);
@@ -451,7 +468,27 @@ body {
   }
 }
 
-//AJOUT DUKE
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   html {
     overflow-x: hidden;

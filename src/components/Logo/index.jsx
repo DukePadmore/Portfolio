@@ -20,7 +20,7 @@ function Logo() {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <HashLink smooth to={'#'} className='logo__text'>
+      <HashLink smooth to={'#'} className='logo__text animated-gradient'>
         <sup className='logo__text--duke'>Duke</sup>
         <sub className='logo__text--pad'>Padmore</sub>
       </HashLink>

@@ -67,7 +67,7 @@ const icons = [
 
 const IconCloud = () => {
   return (
-    <div>
+    <div className='cloud'>
       <Cloud options={options}>{icons}</Cloud>
     </div>
   );
