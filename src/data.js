@@ -22,7 +22,7 @@ export const myProjects = [
     name: "O'Book",
     description:
       "O'Book is a platform that allows users to lend and borrow books to each other. This project was realized as part of my training.",
-    stack: ['React', 'Redux', 'Tailwind', 'Node.js', 'PostgreSQL'],
+    stack: ['React', 'Redux', 'Tailwind', 'NodeJS', 'PostgreSQL'],
     url: 'https://o-book-front.vercel.app/',
     repo: 'test1',
     image:
@@ -31,7 +31,7 @@ export const myProjects = [
   {
     name: 'JobHunter (work in progress)',
     description:
-      'JobHunter lets you organize your job search and track the status of your applications.',
+      'JobHunter lets you organize your job search and track the status of your applications. Coming soon...',
     stack: ['React', 'Redux', 'Tailwind', 'Firebase'],
     url: '',
     repo: 'test2',

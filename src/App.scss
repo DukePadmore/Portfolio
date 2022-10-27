@@ -1,19 +1,81 @@
 $color-primary: rgb(253, 253, 253);
 $color-secondary: #414141;
 $color-tertiary: #1b9aaa;
+$gradient-linear: #d9ed92, #b5e48c, #99d98c, #76c893, #52b69a, #34a0a4, #168aad,
+  #1a759f, #1e6091, #184e77;
+$gradient-cycle: #d9ed92, #99d98c, #52b69a, #168aad, #1e6091, #184e77, #1a759f,
+  #34a0a4, #76c893, #b5e48c, #d9ed92;
+$react: #61dafb;
+$redux: #764abc;
+$tailwind: #06b6d4;
+$node: #339933;
+$postgres: #4169e1;
+$firebase: #ffca28;
+$gsap: #88ce02;
+$scss: #cc6699;
 
-// #d9ed92,
-// #b5e48c,
-// #99d98c,
-// #76c893,
-// #52b69a,
-// #34a0a4,
-// #168aad,
-// #1a759f,
-// #1e6091,
-// #184e77
+@mixin linkStyle {
+  text-decoration: none;
+  color: $color-secondary;
+}
 
-// #4158d0, #c850c0, #ffcc70, #4158d0
+@mixin buttonStyle {
+  font-weight: 500;
+  padding: 0.5em 1.5em;
+  background-color: $color-tertiary;
+  border: 2px solid $color-tertiary;
+  color: white;
+  border-radius: 3em;
+
+  &:hover {
+    background-color: rgb(254, 254, 254);
+    color: $color-tertiary;
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: $color-tertiary;
+    transform: scale(1) translateY(0);
+  }
+}
+
+// MEDIA QUERIES
+/*
+
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+1200 - 1800: normal style (no media query)
+1800+ px: Big desktop
+
+*/
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //max-width : 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //max-width : 900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      //max-width : 1200px
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    @media (min-width: 112.5em) {
+      //min-width : 1800px
+      @content;
+    }
+  }
+}
 
 *,
 ::before,
@@ -27,6 +89,22 @@ $color-tertiary: #1b9aaa;
 
 html {
   font-size: 62.5%;
+
+  @include responsive(big-desk) {
+    font-size: 75%; //1rem = 12px
+  }
+
+  @include responsive(tab-land) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%; //1rem = 8px (8/16 = 50%)
+  }
+
+  @include responsive(phone) {
+    font-size: 37.5%; //1rem = 6px
+  }
 }
 
 body {
@@ -37,27 +115,6 @@ body {
   background-color: $color-primary;
   box-sizing: border-box;
   overflow-x: hidden;
-}
-
-@mixin linkStyle {
-  text-decoration: none;
-  color: $color-secondary;
-}
-
-@mixin buttonStyle {
-  font-weight: 500;
-  padding: 0.5em 1.5em;
-  background: $color-tertiary;
-  border: 2px solid $color-tertiary;
-  color: white;
-  border-radius: 3em;
-
-  &:hover {
-    background-color: rgb(254, 254, 254);
-    color: $color-tertiary;
-    transform: scale(1.05) translateY(-1px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
 }
 
 .loading {
@@ -80,20 +137,7 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(
-    to right,
-    #d9ed92,
-    #99d98c,
-    #52b69a,
-    #168aad,
-    #1e6091,
-    #184e77,
-    #1a759f,
-    #34a0a4,
-    #76c893,
-    #b5e48c,
-    #d9ed92
-  );
+  background: linear-gradient(to right, $gradient-cycle);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
@@ -158,6 +202,10 @@ body {
 .navigation {
   display: flex;
   align-items: center;
+
+  @include responsive(tab-port) {
+    display: none;
+  }
 }
 
 .nav {
@@ -187,14 +235,12 @@ body {
   font-size: 1.3rem;
 }
 
-.downloadButton:active {
-  background-color: $color-secondary;
-  transform: scale(1) translateY(0);
-}
-
-//AJOUTS DUKE
 .hamburger {
   display: none;
+
+  @include responsive(tab-port) {
+    display: block;
+  }
 
   span {
     display: block;
@@ -220,6 +266,10 @@ body {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 8rem);
+
+  @include responsive(tab-port) {
+    flex-direction: column;
+  }
 
   &__title {
     font-size: 2.6rem;
@@ -247,9 +297,18 @@ body {
   }
 }
 
+.cloud {
+  max-width: 600px;
+}
+
 .section {
   padding: 10rem 0;
   margin-top: 5rem;
+
+  @include responsive(tab-land) {
+    padding: 3rem 0;
+    margin-top: 0;
+  }
 
   h2 {
     text-align: center;
@@ -259,8 +318,8 @@ body {
 }
 
 .about {
-  padding: 0 10vw;
-  max-width: 1000px;
+  // padding: 0 10vw;
+  max-width: 800px;
 
   &__desc {
     font-size: 2rem;
@@ -268,21 +327,36 @@ body {
   }
 }
 
-.projects__box {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
+.projects {
+  max-width: 1400px;
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
 }
 
 .project {
+  width: 31%;
   max-width: 500px;
-  max-height: 400px;
   padding-bottom: 2rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 1rem;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+
+  @include responsive(tab-land) {
+    width: 45%;
+  }
+  @include responsive(tab-port) {
+    width: 80%;
+  }
+  @include responsive(phone) {
+    width: 90%;
+  }
 
   &:hover {
     transform: translateY(-1px);
@@ -335,9 +409,43 @@ body {
     padding: 0 20px 20px;
   }
 
+  &__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+
   &__tech {
     font-size: 1.3rem;
     margin-right: 1rem;
+    color: $color-primary;
+    border-radius: 10%;
+    padding: 0.2rem 0.5rem;
+
+    &--react {
+      background-color: $react;
+    }
+    &--redux {
+      background-color: $redux;
+    }
+    &--tailwind {
+      background-color: $tailwind;
+    }
+    &--nodejs {
+      background-color: $node;
+    }
+    &--postgresql {
+      background-color: $postgres;
+    }
+    &--firebase {
+      background-color: $firebase;
+    }
+    &--gsap {
+      background-color: $gsap;
+    }
+    &--scss {
+      background-color: $scss;
+    }
   }
 }
 
@@ -400,7 +508,7 @@ body {
 .contact {
   font-size: 2rem;
   text-align: center;
-  margin: 0 280px;
+  width: 60%;
 
   &__button {
     @include buttonStyle;
@@ -486,33 +594,5 @@ body {
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  html {
-    overflow-x: hidden;
-    font-size: 10px;
-  }
-
-  body {
-    padding: 0 8px;
-  }
-  .navigation {
-    display: none;
-  }
-
-  .main {
-    padding: 0;
-  }
-  .intro {
-    flex-direction: column;
-  }
-  .section {
-    padding: 10px 5px;
-  }
-
-  .hamburger {
-    display: block;
   }
 }

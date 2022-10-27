@@ -50,7 +50,10 @@ function Project({ name, description, stack, image, url, repo }) {
       <p className='project__desc'>{description}</p>
       <div className='project__stack'>
         {stack.map((technology) => (
-          <span className='project__tech' key={technology}>
+          <span
+            className={`project__tech project__tech--${technology.toLowerCase()}`}
+            key={technology}
+          >
             {technology}
           </span>
         ))}
