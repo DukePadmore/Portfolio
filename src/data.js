@@ -32,7 +32,7 @@ export const myProjects = [
     name: 'JobHunter (work in progress)',
     description:
       'JobHunter lets you organize your job search and track the status of your applications. Coming soon...',
-    stack: ['React', 'Redux', 'Tailwind', 'Firebase'],
+    stack: ['React', 'Redux', 'Tailwind', 'Firebase', 'SCSS'],
     url: '',
     repo: 'test2',
     image:

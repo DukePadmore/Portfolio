@@ -29,9 +29,8 @@ function Intro() {
         <button className='intro__button' onClick={handleButtonClick}>
           Download my resume
         </button>
-        {/* <div>
+        {/* <div className='intro__scroll'>
           <img src={arrow} alt='' className='intro__scroll-arrow' />
-          <p>Scroll</p>
         </div> */}
       </div>
       <IconCloud />

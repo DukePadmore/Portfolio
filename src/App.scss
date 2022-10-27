@@ -35,7 +35,8 @@ $scss: #cc6699;
   }
 
   &:active {
-    background-color: $color-tertiary;
+    background-color: darken($color-tertiary, 10%);
+    color: darken($color-primary, 10%);
     transform: scale(1) translateY(0);
   }
 }
@@ -255,7 +256,7 @@ body {
 }
 
 .main {
-  padding: 0 10vw;
+  // padding: 0 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,13 +293,18 @@ body {
       background-color 0.3s;
   }
 
-  &__scroll-arrow {
+  &__scroll {
+    opacity: 0.09;
     animation: arrow-move 2s linear infinite;
   }
 }
 
 .cloud {
   max-width: 600px;
+
+  @include responsive(tab-port) {
+    max-width: 500px;
+  }
 }
 
 .section {
@@ -318,9 +324,20 @@ body {
 }
 
 .about {
-  // padding: 0 10vw;
-  max-width: 800px;
+  width: 100%;
+  padding: 5vw 10vw;
+  background: linear-gradient($gradient-linear);
+  clip-path: polygon(0 16%, 100% 0%, 100% 84%, 0 100%);
+  // background: url('illustration.png');
+  // background-position: left;
+  // background-size: 15%;
+  // background-repeat: no-repeat;
 
+  &__box {
+    max-width: 800px;
+
+    margin: 0 auto;
+  }
   &__desc {
     font-size: 2rem;
     text-align: justify;
