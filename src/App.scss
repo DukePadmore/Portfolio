@@ -1,6 +1,7 @@
 $color-primary: rgb(253, 253, 253);
 $color-secondary: #414141;
 $color-tertiary: #1b9aaa;
+$grey-primary: rgb(123, 125, 134);
 $gradient-primary: #1b9aaa, #34a0a4;
 $gradient-linear: #d9ed92, #b5e48c, #99d98c, #76c893, #52b69a, #34a0a4, #168aad,
   #1a759f, #1e6091, #184e77;
@@ -325,27 +326,6 @@ body {
   }
 }
 
-.about {
-  width: 100%;
-  padding: 20vh 10vw;
-  background: rgb(218, 232, 232);
-  clip-path: polygon(0 16%, 100% 0%, 100% 84%, 0 100%);
-  // background: url('illustration.png');
-  // background-position: left;
-  // background-size: 15%;
-  // background-repeat: no-repeat;
-
-  &__box {
-    max-width: 800px;
-
-    margin: 0 auto;
-  }
-  &__desc {
-    font-size: 2rem;
-    text-align: justify;
-  }
-}
-
 .projects {
   max-width: 1400px;
 
@@ -358,6 +338,8 @@ body {
 }
 
 .project {
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
   width: 31%;
   max-width: 500px;
   padding-bottom: 2rem;
@@ -372,6 +354,7 @@ body {
   }
   @include responsive(tab-port) {
     width: 80%;
+    font-size: 2.3rem;
   }
   @include responsive(phone) {
     width: 90%;
@@ -425,7 +408,12 @@ body {
   &__name,
   &__desc,
   &__stack {
-    padding: 0 20px 20px;
+    padding: 0 2.5rem 1rem;
+  }
+
+  &__desc {
+    color: $grey-primary;
+    font-size: 1.5rem;
   }
 
   &__stack {
@@ -435,12 +423,15 @@ body {
   }
 
   &__tech {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-right: 1rem;
     color: $color-primary;
     border-radius: 10%;
     padding: 0.2rem 0.5rem;
 
+    @include responsive(tab-port) {
+      font-size: 1.3rem;
+    }
     &--react {
       background-color: $react;
     }
@@ -478,58 +469,117 @@ body {
 
 .experience {
   width: 100%;
-  padding: 0 10vw;
+  padding: 0 1vw;
 
-  &__box {
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-  }
+  &__position {
+    font-family: 'Poppins', sans-serif;
+    min-height: 31.5rem;
+    max-width: 50rem;
+    padding: 3rem 5rem;
+    margin: 9rem 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: all 0.8s;
 
-  &__list {
-    margin-right: 3rem;
-    font-size: 1.3rem;
-    width: max-content;
-  }
-
-  &__list-item {
-    padding: 0.8rem 0.5rem;
-    border-left: 3px solid rgba(100, 100, 100, 0.8);
-
-    &:hover {
-      transition: all 0.3s ease-in;
-      background-color: rgba($color-secondary, 0.9);
-      color: #fdfdfd;
-      box-shadow: rgba(164, 110, 22, 0.2) 0px 18px 29px 0px;
+    @include responsive(tab-land) {
     }
-    &--selected {
-      transition: all 0.3s ease-in;
-      border-left: 3px solid #f9d862;
-      // background-color: rgba(250, 250, 250, 0.9);
-      color: $color-secondary;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      border-radius: 1rem;
-      background-color: #fff;
+    @include responsive(tab-port) {
+    }
+    @include responsive(phone) {
+    }
+
+    &--nike {
+      border-top: 5px solid orange;
+    }
+    &--gefco {
+      border-top: 5px solid yellow;
+    }
+    &--oclock {
+      border-top: 5px solid green;
     }
   }
 
-  &__detail {
-    width: 100%;
-  }
   &__title {
     font-size: 2rem;
   }
 
+  &__company {
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+  }
+
   &__date {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 1rem;
   }
 
   &__missions-item {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $grey-primary;
     &::before {
       content: '▹ ';
     }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: rgba(175, 174, 174, 0.8);
+    top: 90%;
+    outline: none;
+  }
+  .swiper-button-prev {
+    left: 45%;
+    @include responsive(tab-land) {
+      left: 40%;
+    }
+    @include responsive(tab-port) {
+      left: 35%;
+    }
+    @include responsive(phone) {
+      left: 30%;
+    }
+  }
+  .swiper-button-next {
+    right: 45%;
+    @include responsive(tab-land) {
+      right: 40%;
+    }
+    @include responsive(tab-port) {
+      right: 35%;
+    }
+    @include responsive(phone) {
+      right: 30%;
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 20vh 10vw;
+  background: rgb(218, 232, 232);
+  clip-path: polygon(0 16%, 100% 0%, 100% 84%, 0 100%);
+  // background: url('illustration.png');
+  // background-position: left;
+  // background-size: 15%;
+  // background-repeat: no-repeat;
+
+  &__box {
+    max-width: 800px;
+
+    margin: 0 auto;
+  }
+  &__desc {
+    font-size: 2rem;
+    text-align: justify;
   }
 }
 

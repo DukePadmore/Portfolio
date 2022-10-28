@@ -52,8 +52,9 @@ export const myProjects = [
 export const experience = [
   {
     id: 1,
-    company: "O'Clock",
-    position: 'Front-end Lead Dev (training project)',
+    class: 'oclock',
+    company: "O'Clock school (training project)",
+    position: 'Front-end Lead Dev',
     year: 'August - September 2022',
     description: [
       'Goal definition :',
@@ -65,11 +66,12 @@ export const experience = [
   },
   {
     id: 2,
+    class: 'gefco',
     company: 'GEFCO',
     position: 'Country Buyer',
     year: 'December 2019 - February 2022',
     description: [
-      'Scope → GEFCO France & its subsidiaries (more than 70 locations)',
+      'Scope: GEFCO France & its subsidiaries (more than 70 locations)',
       'Purchasing categories: Consulting Services & General Expenses',
       'Purchasing strategy development, supplier sourcing, tendering, negotiation & contract management',
       'Reporting & performance management: KPI analysis & spend analysis by purchasing category',
@@ -77,11 +79,12 @@ export const experience = [
   },
   {
     id: 3,
+    class: 'gefco',
     company: 'GEFCO',
     position: 'Global Indirect Buyer',
     year: 'September 2018 - November 2019',
     description: [
-      'Scope → worldwide',
+      'Scope: worldwide',
       'Purchasing categories (support to Lead Buyers) → Consulting Services, General Expenses, IT, Facility Management, Operations & Reusable Packaging',
       'Implementation of the Global Purchasing Strategy',
       'Supplier sourcing, tendering, negotiation & contract management',
@@ -89,23 +92,26 @@ export const experience = [
   },
   {
     id: 4,
+    class: 'nike',
     company: 'Nike Inc.',
     position: 'Assistant Store Manager',
     year: 'April 2017 - August 2018',
     description: [
       'Management of a team of 35 sales associates & 2 team leaders',
-      'Analysis & development of the turnover and KPIs (turnover → €5.8 million in 2017)',
-      'Recruitment, onboarding & training of new employees and staff scheduling',
-      '“Nike Community” program ambassador in Paris: organization and promotion of non-profit sports events for children aged 6-12',
+      'Analysis/development of the turnover & KPIs (turnover: €5.8 million in 2017)',
+      'Recruitment, onboarding & training of new employees',
+      '“Nike Community” program ambassador: organization & promotion of non-profit sports events for children aged 6-12',
     ],
   },
   {
     id: 5,
+    class: 'nike',
     company: 'Nike Inc.',
     position: 'Team Leader',
     year: 'August 2016 - March 2017',
     description: [
       'Management of a team of 10 sales associates',
+      'Staff scheduling',
       'Planning & processing of daily deliveries',
       'Stock management',
     ],
