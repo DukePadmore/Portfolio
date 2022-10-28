@@ -1,6 +1,7 @@
 $color-primary: rgb(253, 253, 253);
 $color-secondary: #414141;
 $color-tertiary: #1b9aaa;
+$gradient-primary: #1b9aaa, #34a0a4;
 $gradient-linear: #d9ed92, #b5e48c, #99d98c, #76c893, #52b69a, #34a0a4, #168aad,
   #1a759f, #1e6091, #184e77;
 $gradient-cycle: #d9ed92, #99d98c, #52b69a, #168aad, #1e6091, #184e77, #1a759f,
@@ -21,23 +22,24 @@ $scss: #cc6699;
 
 @mixin buttonStyle {
   font-weight: 500;
-  padding: 0.5em 1.5em;
+  padding: 0.6em 1.5em;
   background-color: $color-tertiary;
-  border: 2px solid $color-tertiary;
-  color: white;
+  // border: 2px solid $color-tertiary;
+  border: none;
+  color: #fff;
   border-radius: 3em;
 
   &:hover {
-    background-color: rgb(254, 254, 254);
-    color: $color-tertiary;
-    transform: scale(1.05) translateY(-1px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: darken($color-tertiary, 10%);
+    // background-color: rgb(254, 254, 254);
+    // color: $color-tertiary;
+    // transform: scale(1.05) translateY(-1px);
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
   &:active {
     background-color: darken($color-tertiary, 10%);
     color: darken($color-primary, 10%);
-    transform: scale(1) translateY(0);
   }
 }
 
@@ -325,8 +327,8 @@ body {
 
 .about {
   width: 100%;
-  padding: 5vw 10vw;
-  background: linear-gradient($gradient-linear);
+  padding: 20vh 10vw;
+  background: rgb(218, 232, 232);
   clip-path: polygon(0 16%, 100% 0%, 100% 84%, 0 100%);
   // background: url('illustration.png');
   // background-position: left;
@@ -464,10 +466,19 @@ body {
       background-color: $scss;
     }
   }
+
+  &__links-mobile {
+    display: none;
+
+    @include responsive(tab-land) {
+      display: block;
+    }
+  }
 }
 
 .experience {
-  width: 80%;
+  width: 100%;
+  padding: 0 10vw;
 
   &__box {
     display: flex;

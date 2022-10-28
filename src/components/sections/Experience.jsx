@@ -2,18 +2,18 @@ import { useState } from 'react';
 import { experience } from '../../data';
 
 function Experience() {
-  const [job, setJob] = useState(1);
-  const selectedJob = experience.find((position) => position.id === job);
-  const displayJob = (e) => {
-    if (selectedJob.id != e.target.value) {
-      setJob(e.target.value);
-    }
-  };
+  // const [job, setJob] = useState(1);
+  // const selectedJob = experience.find((position) => position.id === job);
+  // const displayJob = (e) => {
+  //   if (selectedJob.id != e.target.value) {
+  //     setJob(e.target.value);
+  //   }
+  // };
   return (
     <section className='section experience' id='experience'>
       <h2 className='experience__title'>Relevant Work Experience</h2>
       <div className='experience__box'>
-        <ul className='experience__list'>
+        {/* <ul className='experience__list'>
           {experience &&
             experience.map((position) => (
               <li
@@ -29,8 +29,8 @@ function Experience() {
                 {position.position} @ {position.company}
               </li>
             ))}
-        </ul>
-        <div className='experience__detail' key={selectedJob.id}>
+        </ul> */}
+        {/* <div className='experience__detail' key={selectedJob.id}>
           <h3 className='experience__title'>
             {selectedJob.position} @
             <span className='experience__company'> {selectedJob.company}</span>
@@ -43,7 +43,25 @@ function Experience() {
               </li>
             ))}
           </ol>
-        </div>
+        </div> */}
+
+        {experience &&
+          experience.map((position) => (
+            <div key={position.id} className='experience__position'>
+              <h3 className='experience__title'>
+                {position.position} @
+                <span className='experience__company'> {position.company}</span>
+              </h3>
+              <h4 className='experience__date'>{position.year}</h4>
+              <ol className='experience__missions-list'>
+                {position.description.map((detail) => (
+                  <li className='experience__missions-item' key={detail}>
+                    {detail}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ))}
       </div>
     </section>
   );

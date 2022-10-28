@@ -18,13 +18,10 @@ function Intro() {
     <section className='intro'>
       <div>
         <h1 className='intro__title'>
-          Hi, my name is
-          <span className='intro__title--focus'>Duke.</span>
-          I'm a{' '}
-          <span className='animated-gradient'>
-            front-end web developer
-          </span>{' '}
-          based in Montreal, Canada.
+          Hi, my name is Duke. I'm a
+          <span className='intro__title--focus animated-gradient'>
+            Web Developer.
+          </span>
         </h1>
         <button className='intro__button' onClick={handleButtonClick}>
           Download my resume
