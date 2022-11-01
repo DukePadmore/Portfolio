@@ -132,6 +132,10 @@ body {
     font-size: 10rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     line-height: 0.8em;
+
+    @include responsive(tab-port) {
+      font-size: 8rem;
+    }
   }
   &__title-char {
     display: inline-block;
@@ -252,8 +256,30 @@ body {
     height: 2px;
     border-radius: 9999px;
     background-color: $color-secondary;
+    transition: all 0.4s ease-in-out;
     &:not(:last-child) {
       margin-bottom: 7px;
+    }
+  }
+  &.active {
+    transition-delay: 0.8s;
+    // transform: rotate(90deg);
+
+    span:nth-child(2) {
+      width: 0;
+    }
+
+    span:nth-child(1),
+    span:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+
+    span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-9px) rotate(135deg);
     }
   }
 }
@@ -304,6 +330,7 @@ body {
 
 .cloud {
   max-width: 600px;
+  min-width: 320px;
 
   @include responsive(tab-port) {
     max-width: 500px;
@@ -348,6 +375,7 @@ body {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  position: relative;
 
   @include responsive(tab-land) {
     width: 45%;
@@ -365,8 +393,17 @@ body {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
       rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
+    @include responsive(tab-land) {
+      transform: none;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
     .project__image {
       filter: blur(5px);
+
+      @include responsive(tab-land) {
+        filter: none;
+      }
     }
   }
 
@@ -388,21 +425,22 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    & a {
+    @include responsive(tab-land) {
+      display: none;
+    }
+
+    a {
       font-size: 1rem;
       display: block;
-      padding: 0.1em 0.8em;
-      background: $color-primary;
-      border: 1px solid $color-secondary;
-      color: $color-secondary;
-      border-radius: 3em;
       text-decoration: none;
       margin-bottom: 0.5rem;
+      text-align: center;
+      @include buttonStyle;
     }
   }
 
   &__image-caption--hidden {
-    visibility: hidden;
+    display: none;
   }
 
   &__name,
@@ -460,22 +498,36 @@ body {
 
   &__links-mobile {
     display: none;
-
+    position: absolute;
+    top: 5%;
+    right: 5%;
     @include responsive(tab-land) {
       display: block;
+    }
+
+    a:link,
+    a:visited {
+      @include linkStyle;
+    }
+
+    .material-symbols-sharp {
+      margin-right: 1rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      padding: 1rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 2px;
     }
   }
 }
 
 .experience {
   width: 100%;
-  padding: 0 1vw;
 
   &__position {
     font-family: 'Poppins', sans-serif;
     min-height: 31.5rem;
     max-width: 50rem;
-    padding: 3rem 5rem;
+    padding: 3rem 3rem;
     margin: 9rem 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 1rem;
@@ -483,11 +535,8 @@ body {
     overflow-x: hidden;
     transition: all 0.8s;
 
-    @include responsive(tab-land) {
-    }
     @include responsive(tab-port) {
-    }
-    @include responsive(phone) {
+      padding: 3rem 2rem;
     }
 
     &--nike {

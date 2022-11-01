@@ -34,7 +34,7 @@ export const myProjects = [
       'JobHunter lets you organize your job search and track the status of your applications. Coming soon...',
     stack: ['React', 'Redux', 'Tailwind', 'Firebase', 'SCSS'],
     url: '',
-    repo: 'test2',
+    repo: 'https://github.com/DukePadmore/JobHunter',
     image:
       'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
   },
@@ -43,7 +43,7 @@ export const myProjects = [
     description:
       'This website is aimed at showcasing my skills and the different projects that I have been able to carry out.',
     stack: ['React', 'GSAP', 'SCSS'],
-    url: '/#about',
+    url: '/about',
     repo: 'https://github.com/DukePadmore/Portfolio',
     image: '/portfolio.png',
   },

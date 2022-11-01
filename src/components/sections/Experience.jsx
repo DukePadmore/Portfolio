@@ -16,6 +16,7 @@ function Experience() {
         className='experience__box'
         centeredSlides
         slidesPerView='auto'
+        loop
       >
         {experience &&
           experience.map((position) => (
