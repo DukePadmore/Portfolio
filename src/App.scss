@@ -136,6 +136,10 @@ body {
     @include responsive(tab-port) {
       font-size: 8rem;
     }
+
+    @include responsive(phone) {
+      font-size: 7rem;
+    }
   }
   &__title-char {
     display: inline-block;
@@ -254,16 +258,17 @@ body {
     display: block;
     width: 28px;
     height: 2px;
-    border-radius: 9999px;
+    // border-radius: 9999px;
     background-color: $color-secondary;
-    transition: all 0.4s ease-in-out;
+    transition: width 0.4s, transform 0.4s;
+
     &:not(:last-child) {
       margin-bottom: 7px;
     }
   }
   &.active {
+    transition-property: transform;
     transition-delay: 0.8s;
-    // transform: rotate(90deg);
 
     span:nth-child(2) {
       width: 0;
@@ -282,6 +287,16 @@ body {
       transform: translateY(-9px) rotate(135deg);
     }
   }
+
+  // &__nav {
+  //   position: fixed;
+  //   top: 20vh;
+  //   left: 0;
+  //   width: 100vw;
+  //   height: 80vh;
+  //   background-color: $color-primary;
+  //   z-index: 1;
+  // }
 }
 
 .main {
@@ -323,8 +338,14 @@ body {
   }
 
   &__scroll {
-    opacity: 0.09;
-    animation: arrow-move 2s linear infinite;
+    @include responsive(tab-land) {
+      display: none;
+    }
+    opacity: 0.2;
+    animation: arrow-move 1s linear infinite;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
   }
 }
 
@@ -339,7 +360,7 @@ body {
 
 .section {
   padding: 10rem 0;
-  margin-top: 5rem;
+  // margin-top: 5rem;
 
   @include responsive(tab-land) {
     padding: 3rem 0;
@@ -354,7 +375,16 @@ body {
 }
 
 .projects {
-  max-width: 1400px;
+  max-width: 1500px;
+  padding: 25vh 5vw;
+  background: rgb(218, 232, 232);
+  clip-path: polygon(0 14%, 100% 0%, 100% 86%, 0 100%);
+  @include responsive(tab-land) {
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  }
+  @include responsive(tab-port) {
+    clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0 100%);
+  }
 
   &__box {
     display: flex;
@@ -539,6 +569,11 @@ body {
       padding: 3rem 2rem;
     }
 
+    @include responsive(phone) {
+      max-width: 80vw;
+      min-height: 35rem;
+    }
+
     &--nike {
       border-top: 5px solid orange;
     }
@@ -655,7 +690,9 @@ body {
 .footer {
   font-size: 1.6rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 50px 0 20px;
 
   &__text {

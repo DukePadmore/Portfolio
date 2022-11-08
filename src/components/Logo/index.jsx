@@ -1,30 +1,30 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import Mail from '../../assets/mail.svg';
-import LinkedIn from '../../assets/linkedin.svg';
+// import Mail from '../../assets/mail.svg';
+// import LinkedIn from '../../assets/linkedin.svg';
 
 function Logo() {
-  const [isHovering, setIsHovering] = useState(false);
+  // const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
+  // const handleMouseOver = () => {
+  //   setIsHovering(true);
+  // };
 
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
+  // const handleMouseOut = () => {
+  //   setIsHovering(false);
+  // };
 
   return (
     <div
       className='logo'
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      // onMouseOver={handleMouseOver}
+      // onMouseOut={handleMouseOut}
     >
       <HashLink smooth to={'#'} className='logo__text animated-gradient'>
         <sup className='logo__text--duke'>Duke</sup>
         <sub className='logo__text--pad'>Padmore</sub>
       </HashLink>
-      {isHovering && (
+      {/* {isHovering && (
         <div className='logo__contact'>
           <a
             href='https://www.linkedin.com/in/dukepadmore'
@@ -39,7 +39,7 @@ function Logo() {
             <img src={Mail} alt='mail' />
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

@@ -7,7 +7,7 @@ function Contact() {
         full-stack developer and I would love to discuss new opportunities.
       </p>
       <a href='mailto:dukepadmore@gmail.com' className='contact__button'>
-        Contact me
+        Contact me !
       </a>
     </section>
   );

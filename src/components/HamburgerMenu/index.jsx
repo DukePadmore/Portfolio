@@ -6,14 +6,17 @@ function HamburgerMenu() {
     setMenuActive((current) => !current);
   };
   return (
-    <div
-      className={menuActive ? 'hamburger active' : 'hamburger'}
-      onClick={handleClick}
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <>
+      <div
+        className={menuActive ? 'hamburger active' : 'hamburger'}
+        onClick={handleClick}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      {/* {menuActive && <div className='hamburger__nav'>Test</div>} */}
+    </>
   );
 }
 
