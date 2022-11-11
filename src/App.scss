@@ -380,7 +380,7 @@ body {
   background: rgb(218, 232, 232);
   clip-path: polygon(0 14%, 100% 0%, 100% 86%, 0 100%);
   @include responsive(tab-land) {
-    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+    clip-path: polygon(0 13%, 100% 0%, 100% 87%, 0 100%);
   }
   @include responsive(tab-port) {
     clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0 100%);
@@ -693,14 +693,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 20px;
+  margin: 5rem 0 2rem;
 
   &__text {
-    margin-right: 15px;
+    margin-bottom: 1rem;
   }
 
   &__icon {
-    margin-right: 10px;
+    margin: 0.5rem;
     border-radius: 50%;
   }
 }

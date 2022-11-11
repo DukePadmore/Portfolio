@@ -1,5 +1,6 @@
 import IconCloud from '../IconCloud';
 import arrow from '../../assets/arrow.svg';
+import { HashLink } from 'react-router-hash-link';
 
 function Intro() {
   const handleButtonClick = () => {
@@ -14,6 +15,7 @@ function Intro() {
       });
     });
   };
+
   return (
     <section className='intro'>
       <div>
@@ -27,7 +29,9 @@ function Intro() {
           Download my resume
         </button>
         <div className='intro__scroll'>
-          <img src={arrow} alt='' className='intro__scroll-arrow' />
+          <HashLink smooth to='#projects' className='nav__item-link'>
+            <img src={arrow} alt='' className='intro__scroll-arrow' />
+          </HashLink>
         </div>
       </div>
       <IconCloud />
