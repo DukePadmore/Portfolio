@@ -24,7 +24,7 @@ export const myProjects = [
       "O'Book is a platform that allows users to lend and borrow books to each other. This project was realized as part of my training.",
     stack: ['React', 'Redux', 'Tailwind', 'NodeJS', 'PostgreSQL'],
     url: 'https://o-book-front.vercel.app/',
-    repo: 'test1',
+    repo: 'https://github.com/DukePadmore/Obook',
     image:
       'https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   },
@@ -34,7 +34,7 @@ export const myProjects = [
       'JobHunter lets you organize your job search and track the status of your applications. Coming soon...',
     stack: ['React', 'Redux', 'Tailwind', 'Firebase', 'SCSS'],
     url: '',
-    repo: 'https://github.com/DukePadmore/JobHunter',
+    repo: 'https://github.com/DukePadmore',
     image:
       'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
   },
