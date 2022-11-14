@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { navLinks } from '../../data';
+import { HashLink } from 'react-router-hash-link';
 
 function HamburgerMenu() {
   const [menuActive, setMenuActive] = useState(false);
@@ -15,7 +17,27 @@ function HamburgerMenu() {
         <span></span>
         <span></span>
       </div>
-      {/* {menuActive && <div className='hamburger__nav'>Test</div>} */}
+      <div
+        className={
+          menuActive ? 'hamburger__nav active' : 'hamburger__nav inactive'
+        }
+      >
+        <ul className='hamburger__list'>
+          {navLinks &&
+            navLinks.map((navLink) => (
+              <li key={navLink.name} className='hamburger__item'>
+                <HashLink
+                  smooth
+                  to={navLink.url}
+                  className='hamburger__item-link'
+                  onClick={handleClick}
+                >
+                  {navLink.name}
+                </HashLink>
+              </li>
+            ))}
+        </ul>
+      </div>
     </>
   );
 }

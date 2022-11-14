@@ -1,5 +1,3 @@
-import { HashLink } from 'react-router-hash-link';
-
 function About() {
   return (
     <section className='section about' id='about'>

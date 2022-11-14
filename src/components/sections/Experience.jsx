@@ -3,13 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import nike from '../../assets/linkedin.svg';
 
 function Experience() {
   return (
     <section className='section experience' id='experience'>
       <h2 className='experience__title'>Relevant Work Experience</h2>
-      {/* <div className='experience__box'> */}
       <Swiper
         modules={[Navigation]}
         navigation
@@ -24,10 +22,7 @@ function Experience() {
               className={`experience__position experience__position--${position.class}`}
               key={position.id}
             >
-              <h3 className='experience__title'>
-                {position.position}
-                {/* <span className='experience__company'>{position.company}</span> */}
-              </h3>
+              <h3 className='experience__title'>{position.position}</h3>
               <h3 className='experience__company'>{position.company}</h3>
               <h4 className='experience__date'>{position.year}</h4>
               <ul className='experience__missions-list'>
@@ -40,7 +35,6 @@ function Experience() {
             </SwiperSlide>
           ))}
       </Swiper>
-      {/* </div> */}
     </section>
   );
 }
