@@ -1,0 +1,71 @@
+@import './variables';
+@import './animations';
+
+@mixin linkStyle {
+  text-decoration: none;
+  color: $color-secondary;
+}
+
+@mixin buttonStyle {
+  font-weight: 500;
+  padding: 0.6em 1.5em;
+  background-color: $color-tertiary;
+  border: none;
+  color: #fff;
+  border-radius: 3em;
+
+  &:hover {
+    background-color: darken($color-tertiary, 10%);
+  }
+
+  &:active {
+    background-color: darken($color-tertiary, 10%);
+    color: darken($color-primary, 10%);
+  }
+}
+
+@mixin animatedGradient {
+  background: linear-gradient(to right, $gradient-cycle);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  background-size: 200%;
+  animation: background-pan 5s linear infinite;
+}
+
+// MEDIA QUERIES
+/*
+
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+1200 - 1800: normal style (no media query)
+1800+ px: Big desktop
+
+*/
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //max-width : 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //max-width : 900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      //max-width : 1200px
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    @media (min-width: 112.5em) {
+      //min-width : 1800px
+      @content;
+    }
+  }
+}

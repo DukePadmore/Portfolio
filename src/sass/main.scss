@@ -1,80 +1,6 @@
-$color-primary: rgb(253, 253, 253);
-$color-secondary: #414141;
-$color-tertiary: #1b9aaa;
-$grey-primary: rgb(123, 125, 134);
-$gradient-primary: #1b9aaa, #34a0a4;
-$gradient-linear: #d9ed92, #b5e48c, #99d98c, #76c893, #52b69a, #34a0a4, #168aad,
-  #1a759f, #1e6091, #184e77;
-$gradient-cycle: #d9ed92, #99d98c, #52b69a, #168aad, #1e6091, #184e77, #1a759f,
-  #34a0a4, #76c893, #b5e48c, #d9ed92;
-$react: #61dafb;
-$redux: #764abc;
-$tailwind: #06b6d4;
-$node: #339933;
-$postgres: #4169e1;
-$firebase: #ffca28;
-$gsap: #88ce02;
-$scss: #cc6699;
-
-@mixin linkStyle {
-  text-decoration: none;
-  color: $color-secondary;
-}
-
-@mixin buttonStyle {
-  font-weight: 500;
-  padding: 0.6em 1.5em;
-  background-color: $color-tertiary;
-  border: none;
-  color: #fff;
-  border-radius: 3em;
-
-  &:hover {
-    background-color: darken($color-tertiary, 10%);
-  }
-
-  &:active {
-    background-color: darken($color-tertiary, 10%);
-    color: darken($color-primary, 10%);
-  }
-}
-
-// MEDIA QUERIES
-/*
-
-0 - 600px: Phone
-600 - 900px: Tablet portrait
-900 - 1200px: Tablet landscape
-1200 - 1800: normal style (no media query)
-1800+ px: Big desktop
-
-*/
-@mixin responsive($breakpoint) {
-  @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
-      //max-width : 600px
-      @content;
-    }
-  }
-  @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
-      //max-width : 900px
-      @content;
-    }
-  }
-  @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
-      //max-width : 1200px
-      @content;
-    }
-  }
-  @if $breakpoint == big-desk {
-    @media (min-width: 112.5em) {
-      //min-width : 1800px
-      @content;
-    }
-  }
-}
+@import './variables';
+@import './mixins';
+@import './animations';
 
 *,
 ::before,
@@ -145,12 +71,7 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(to right, $gradient-cycle);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-  background-size: 200%;
-  animation: background-pan 5s linear infinite;
+  @include animatedGradient;
 }
 
 .header {
@@ -735,49 +656,5 @@ body {
   &__icon {
     margin: 0.5rem;
     border-radius: 50%;
-  }
-}
-
-@keyframes navbarAppear {
-  0% {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes navbarDisappear {
-  0% {
-    opacity: 1;
-    transform: translate(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
-}
-
-@keyframes background-pan {
-  from {
-    background-position: 0% center;
-  }
-  to {
-    background-position: -200% center;
-  }
-}
-
-@keyframes arrow-move {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
