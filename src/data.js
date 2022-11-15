@@ -25,7 +25,7 @@ export const myProjects = [
     stack: ['React', 'Redux', 'Tailwind', 'NodeJS', 'PostgreSQL'],
     url: 'https://o-book-front.vercel.app/',
     repo: 'https://github.com/DukePadmore/Obook',
-    image: '/obook.jpeg',
+    image: 'obook',
   },
   {
     name: 'JobHunter (work in progress)',
@@ -34,8 +34,7 @@ export const myProjects = [
     stack: ['React', 'Redux', 'Tailwind', 'Firebase', 'SCSS'],
     url: '',
     repo: 'https://github.com/DukePadmore',
-    image:
-      'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    image: 'jobhunter',
   },
   {
     name: 'Portfolio',
@@ -44,7 +43,7 @@ export const myProjects = [
     stack: ['React', 'GSAP', 'SCSS'],
     url: '/about',
     repo: 'https://github.com/DukePadmore/Portfolio',
-    image: '/portfolio.png',
+    image: 'portfolio',
   },
 ];
 

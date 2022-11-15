@@ -15,7 +15,11 @@ function Project({ name, description, stack, image, url, repo }) {
       onMouseLeave={handleMouseLeave}
     >
       <figure className='project__figure'>
-        <img className='project__image' src={image} alt={name} />
+        <img
+          className='project__image'
+          src={`/src/assets/${image}.png`}
+          alt={name}
+        />
         <figcaption
           className={
             isProjectHovered
