@@ -8,6 +8,7 @@ function Project({ name, description, stack, image, url, repo }) {
   const handleMouseLeave = () => {
     setIsProjectHovered(false);
   };
+
   return (
     <div
       className='project'
@@ -15,11 +16,7 @@ function Project({ name, description, stack, image, url, repo }) {
       onMouseLeave={handleMouseLeave}
     >
       <figure className='project__figure'>
-        <img
-          className='project__image'
-          src={`../../assets/images/${image}.png`}
-          alt={name}
-        />
+        <img className='project__image' src={image} alt={name} />
         <figcaption
           className={
             isProjectHovered
