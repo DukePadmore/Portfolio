@@ -262,6 +262,10 @@ body {
       padding-left: 0;
     }
 
+    // @include responsive(tab-port) {
+    //   text-align: center;
+    // }
+
     &--focus {
       font-size: 7.2rem;
       display: block;
@@ -290,6 +294,12 @@ body {
 
     @include responsive(tab-land) {
       display: none;
+    }
+  }
+
+  & > div {
+    @include responsive(tab-port) {
+      text-align: center;
     }
   }
 }
