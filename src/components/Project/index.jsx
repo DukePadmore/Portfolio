@@ -17,7 +17,7 @@ function Project({ name, description, stack, image, url, repo }) {
       <figure className='project__figure'>
         <img
           className='project__image'
-          src={`/src/assets/${image}.png`}
+          src={`../../assets/images/${image}.png`}
           alt={name}
         />
         <figcaption
