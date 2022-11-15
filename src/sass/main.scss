@@ -262,9 +262,9 @@ body {
       padding-left: 0;
     }
 
-    // @include responsive(tab-port) {
-    //   text-align: center;
-    // }
+    @include responsive(tab-port) {
+      font-size: 3rem;
+    }
 
     &--focus {
       font-size: 7.2rem;
@@ -283,6 +283,11 @@ body {
     margin: 4rem 1rem;
     transition: transform 0.3s, box-shadow 0.3s, color 0.3s,
       background-color 0.3s;
+
+    @include responsive(tab-port) {
+      font-size: 2.2rem;
+      margin: 3rem 0 5rem;
+    }
   }
 
   &__scroll {
@@ -526,7 +531,7 @@ body {
     min-height: 31.5rem;
     max-width: 50rem;
     padding: 3rem 3rem;
-    margin: 9rem 1rem;
+    margin: 3rem 1rem 9rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 1rem;
     background-color: #fff;
@@ -628,6 +633,10 @@ body {
   &__desc {
     font-size: 2rem;
     text-align: justify;
+
+    @include responsive(phone) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -636,6 +645,12 @@ body {
   text-align: center;
   width: 60%;
 
+  &__desc {
+    @include responsive(phone) {
+      font-size: 2.5rem;
+    }
+  }
+
   &__button {
     @include buttonStyle;
     font-size: 1.6rem;
@@ -643,6 +658,10 @@ body {
     display: inline-block;
     margin-top: 2em;
     transition: all 0.3s;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+    }
 
     &:active {
       background-color: $color-secondary;
@@ -658,6 +677,10 @@ body {
   justify-content: center;
   align-items: center;
   margin: 5rem 0 2rem;
+
+  @include responsive(phone) {
+    font-size: 2rem;
+  }
 
   &__text {
     margin-bottom: 1rem;
