@@ -4,8 +4,8 @@ function About() {
       <div className='about__box'>
         <h2 className='about__title'>About Me</h2>
         <p className='about__desc'>
-          Hi ! My name is Duke and I am a French junior developer that recently
-          moved to Canada. After almost 10 years of experience in Retail and
+          Hi ! My name is Duke and I am a French junior developer who will soon
+          relocate to Canada. After almost 10 years of experience in Retail and
           Procurement, I decided to transition to a new career in a field that
           has fascinated me for many years now: Web Development.
         </p>
