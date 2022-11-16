@@ -41,7 +41,7 @@ export const myProjects = [
     description:
       'This website is aimed at showcasing my skills and the different projects that I have been able to carry out.',
     stack: ['React', 'GSAP', 'SCSS'],
-    url: '/about',
+    url: 'https://dukepadmore.com',
     repo: 'https://github.com/DukePadmore/Portfolio',
     image: '/portfolio.png',
   },

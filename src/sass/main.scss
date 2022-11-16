@@ -15,6 +15,7 @@
 html {
   font-size: 62.5%;
   overflow-x: clip;
+
   @include responsive(big-desk) {
     font-size: 75%; //1rem = 12px
   }

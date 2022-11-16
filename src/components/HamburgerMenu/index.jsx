@@ -7,6 +7,7 @@ function HamburgerMenu() {
   const handleClick = () => {
     setMenuActive((current) => !current);
   };
+
   return (
     <>
       <div
