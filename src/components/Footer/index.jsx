@@ -4,7 +4,7 @@ import GitHub from '../../assets/github.svg';
 function Footer() {
   return (
     <footer className='footer'>
-      <p className='footer__text'>© Duke Padmore 2022</p>
+      <p className='footer__text'>© Duke Padmore 2023</p>
       <div className='footer__medias'>
         <a
           className='footer__link'
