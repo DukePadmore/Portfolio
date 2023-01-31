@@ -43,6 +43,10 @@ body {
   overflow-x: clip;
 }
 
+.fixed-body {
+  position: fixed;
+}
+
 .loading {
   display: grid;
   place-content: center;
@@ -171,6 +175,9 @@ body {
     transition-property: transform;
     transition-delay: 0.8s;
     z-index: 9999;
+    position: absolute; //AJOUT
+    left: 84.5vw; //AJOUT
+    top: 2vh; // AJOUT
 
     span {
       background-color: #fff;

@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { navLinks } from '../../data';
 import { HashLink } from 'react-router-hash-link';
+import { useEffect } from 'react';
 
 function HamburgerMenu() {
   const [menuActive, setMenuActive] = useState(false);
   const handleClick = () => {
     setMenuActive((current) => !current);
+    document.body.classList.toggle('fixed-body');
   };
 
   return (
