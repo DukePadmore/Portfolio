@@ -37,6 +37,15 @@ export const myProjects = [
     image: '/jobhunter.png',
   },
   {
+    name: 'Scoreboard',
+    description:
+      'A small scoreboard I created in order to keep track of the score when playing basketball against my friends',
+    stack: ['Javascript'],
+    url: 'https://gilded-semifreddo-2ad474.netlify.app/',
+    repo: 'https://github.com/DukePadmore/Scoreboard',
+    image: '/scoreboard.png',
+  },
+  {
     name: 'Portfolio',
     description:
       'This website is aimed at showcasing my skills and the different projects that I have been able to carry out.',
