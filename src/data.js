@@ -19,6 +19,14 @@ export const navLinks = [
 
 export const myProjects = [
   {
+    name: 'OuiChat',
+    description: 'A chat app built with React & Firebase',
+    stack: ['React', 'Firebase', 'SCSS'],
+    url: 'https://sunny-hamster-bcf104.netlify.app/',
+    repo: 'https://github.com/DukePadmore/Ouichat',
+    image: '/ouichat.png',
+  },
+  {
     name: "O'Book",
     description:
       "O'Book is a platform that allows users to lend and borrow books to each other. This project was realized as part of my training.",
