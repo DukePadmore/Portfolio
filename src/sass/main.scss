@@ -41,6 +41,7 @@ body {
   background-color: $color-primary;
   box-sizing: border-box;
   overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
 }
 
 .fixed-body {
@@ -175,9 +176,9 @@ body {
     transition-property: transform;
     transition-delay: 0.8s;
     z-index: 9999;
-    position: absolute; //AJOUT
-    left: 84.5vw; //AJOUT
-    top: 2vh; // AJOUT
+    position: absolute;
+    left: 84.5vw;
+    top: 2vh;
 
     span {
       background-color: #fff;
@@ -332,7 +333,7 @@ body {
     margin-bottom: 5vh;
   }
   @include responsive(phone) {
-    margin-bottom: 0;
+    margin: 0 2rem;
   }
 }
 
