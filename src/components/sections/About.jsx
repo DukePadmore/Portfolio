@@ -19,7 +19,7 @@ function About() {
         </p>
         <p className='about__desc'>
           With a strong interest for anything related to front-end, my goal is
-          to create intuitive, carefully designed websites, and to learn (a lot)
+          to create intuitive, carefully designed websites and to hone my skills
           in the process.
         </p>
       </div>
