@@ -31,7 +31,7 @@ export const myProjects = [
     description:
       "O'Book is a platform that allows users to lend and borrow books to each other. This project was realized as part of my training.",
     stack: ['React', 'Redux', 'Tailwind', 'NodeJS', 'PostgreSQL'],
-    url: 'https://o-book-front.vercel.app/',
+    url: '',
     repo: 'https://github.com/DukePadmore/Obook',
     image: '/obook.png',
   },

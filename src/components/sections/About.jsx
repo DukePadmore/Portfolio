@@ -10,12 +10,12 @@ function About() {
           has fascinated me for many years now: Web Development.
         </p>
         <p className='about__desc'>
-          Thanks to an intensive 6-months Fullstack JavaScript program at École
-          O'Clock (Paris, France) in 2022, I was able to learn the key technical
-          skills every modern web developer needs. I am now ready to take on new
-          and exciting challenges as a web developer and I am confident that my
-          curiosity, my passion and my skills will be a great addition to your
-          team !
+          After months of self-studying, I decided to join an intensive 6-months
+          Fullstack JavaScript training program at École O'Clock (Paris, France)
+          in 2022. I was able to learn the key technical skills every modern web
+          developer needs. I am now ready to take on new and exciting challenges
+          as a web developer and I am confident that my curiosity, my passion
+          and my soft & hard skills will be a great addition to your team !
         </p>
         <p className='about__desc'>
           With a strong interest for anything related to front-end, my goal is
