@@ -10,7 +10,7 @@ function About() {
           has fascinated me for many years now: Web Development.
         </p>
         <p className='about__desc'>
-          After months of self-studying, I decided to join an intensive 6-months
+          After months of self-studying, I joined an intensive 6-months
           Fullstack JavaScript training program at École O'Clock (Paris, France)
           in 2022. I was able to learn the key technical skills every modern web
           developer needs. I am now ready to take on new and exciting challenges
