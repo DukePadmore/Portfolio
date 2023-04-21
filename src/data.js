@@ -36,13 +36,13 @@ export const myProjects = [
     image: '/obook.png',
   },
   {
-    name: 'JobHunter (work in progress)',
+    name: 'Real MVP (work in progress)',
     description:
-      'JobHunter lets you organize your job search and track the status of your applications. Coming soon...',
-    stack: ['React', 'Redux', 'Tailwind', 'Firebase', 'SCSS'],
+      'Real MVP is a web app that lets you track NBA games, scores and players stats. Coming soon...',
+    stack: ['React', 'SCSS'],
     url: '',
-    repo: 'https://github.com/DukePadmore',
-    image: '/jobhunter.png',
+    repo: 'https://github.com/DukePadmore/Real-MVP',
+    image: '/realmvp.png',
   },
   {
     name: 'Scoreboard',
